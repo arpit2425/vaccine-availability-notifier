@@ -7,6 +7,7 @@ require("dotenv").config({ path: "./.env" });
 const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
 cron.scheduleJob("0 */5 * * * *", async () => {
+  console.log("running cron");
   await getVaccine();
 });
 const getVaccine = async () => {
