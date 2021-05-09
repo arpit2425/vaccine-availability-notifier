@@ -52,3 +52,5 @@ const getVaccine = async () => {
     console.log(err);
   }
 };
+const port = 3000 || process.env.PORT;
+app.listen(port);
